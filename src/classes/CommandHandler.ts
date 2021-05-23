@@ -34,7 +34,7 @@ class CommandHandler {
         const command = require(file).default || require(file)
         const { name = fileName, description, options, testOnly } = command;
 
-      if(!command) 
+      if(!command) return;
 
       if (!description) {
         throw new Slasherror(
